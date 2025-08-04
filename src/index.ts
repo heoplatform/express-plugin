@@ -66,4 +66,12 @@ function expressPlugin(): ExpressPlugin {
   };
 }
 
+export async function injectExpress(plugins: any[]) {
+  if (!plugins.find(p => p.name === "express")) {
+    const express = expressPlugin()
+    plugins.push(express)
+    await express.init?.(plugins)
+  }
+}
+
 export { expressPlugin };
