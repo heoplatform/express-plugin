@@ -1,4 +1,4 @@
-import { BaseHooks } from "@yetifrozty/base-plugin-system";
+import { BaseHooks } from "@heoplatform/base-plugin-system";
 import express, { RequestHandler } from "express";
 import http from "http";
 

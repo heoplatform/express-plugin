@@ -14,7 +14,7 @@ An Express.js plugin for the base plugin system that provides HTTP server functi
 ## Installation
 
 ```bash
-npm install @yetifrozty/express-plugin
+npm install @heoplatform/express-plugin
 ```
 
 ## API
@@ -76,7 +76,7 @@ process.env.PORT = '3000';
 
 ```typescript
 import { BaseHooks } from 'base-plugin-system';
-import { expressPlugin, type ExpressHooks } from '@yetifrozty/express-plugin';
+import { expressPlugin, type ExpressHooks } from '@heoplatform/express-plugin';
 
 // API Routes Plugin
 const apiPlugin = (): BaseHooks & ExpressHooks => {

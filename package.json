@@ -1,10 +1,10 @@
 {
-  "name": "@yetifrozty/express-plugin",
+  "name": "@heoplatform/express-plugin",
   "version": "1.0.1",
   "description": "The plugin for express support",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yetifrozty/express-plugin.git"
+    "url": "git+https://github.com/heoplatform/express-plugin.git"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
@@ -31,7 +31,7 @@
     "@types/express": "^5.0.2",
     "@types/node": "^22.15.21",
     "typescript": "^5.8.3",
-    "@yetifrozty/base-plugin-system": "^1.0.0",
+    "@heoplatform/base-plugin-system": "^1.0.0",
     "vitest": "^1.3.1",
     "supertest": "^7.0.0",
     "@types/supertest": "^6.0.2"

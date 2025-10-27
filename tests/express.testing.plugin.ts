@@ -1,4 +1,4 @@
-import { BaseHooks } from '@yetifrozty/base-plugin-system';
+import { BaseHooks } from '@heoplatform/base-plugin-system';
 import { ExpressHooks } from '../src/index'; // Path to express plugin's own types
 import type express from 'express';
 

@@ -1,13 +1,13 @@
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
-import { initPlugins } from '@yetifrozty/base-plugin-system';
+import { initPlugins } from '@heoplatform/base-plugin-system';
 import { expressPlugin, ExpressPlugin } from '../src/index';
 import { createExpressTestingPlugin } from './express.testing.plugin';
 import type { BaseTestingPluginHooks } from '../../base/tests/base.testing.plugin'; // For type if needed
 import request from 'supertest';
 
 // Mock the base plugin system if its actual init logic is not needed or complex for these tests
-vi.mock('@yetifrozty/base-plugin-system', async (importOriginal) => {
-  const original = await importOriginal<typeof import('@yetifrozty/base-plugin-system')>();
+vi.mock('@heoplatform/base-plugin-system', async (importOriginal) => {
+  const original = await importOriginal<typeof import('@heoplatform/base-plugin-system')>();
   return {
     ...original,
     // We only mock initPlugins if necessary, often direct import is fine
