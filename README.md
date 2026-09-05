@@ -76,7 +76,7 @@ process.env.PORT = '3000';
 
 ```typescript
 import { BaseHooks } from 'base-plugin-system';
-import { expressPlugin, type ExpressHooks } from '@heoplatform/express-plugin';
+import { injectExpressPlugin, type ExpressHooks } from '@heoplatform/express-plugin';
 
 // API Routes Plugin
 const apiPlugin = (): BaseHooks & ExpressHooks => {
@@ -86,11 +86,7 @@ const apiPlugin = (): BaseHooks & ExpressHooks => {
     init: async (_plugins) => {
       plugins = _plugins
 
-      if (!plugins.some(p=>p.name === 'express')) {
-        const express = ExpressPlugin()
-        plugins.push(express)
-        express?.init(plugins)
-      }
+      await injectExpress()
     },
     initExpress: async (app, stop) => {
       // Add middleware
